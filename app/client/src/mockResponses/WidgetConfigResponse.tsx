@@ -10,8 +10,8 @@ const WidgetConfigResponse: WidgetConfigReducerState = {
     BUTTON_WIDGET: {
       text: "Submit",
       buttonStyle: "PRIMARY_BUTTON",
-      rows: 1,
-      columns: 2,
+      rows: 1 * 4,
+      columns: 2 * 4,
       widgetName: "Button",
       isDisabled: false,
       isVisible: true,
@@ -24,15 +24,15 @@ const WidgetConfigResponse: WidgetConfigReducerState = {
       fontStyle: "BOLD",
       textAlign: "LEFT",
       textColor: Colors.THUNDER,
-      rows: 1,
-      columns: 4,
+      rows: 1 * 4,
+      columns: 4 * 4,
       widgetName: "Text",
       version: 1,
     },
     RICH_TEXT_EDITOR_WIDGET: {
       defaultText: "This is the initial <b>content</b> of the editor",
-      rows: 5,
-      columns: 8,
+      rows: 5 * 4,
+      columns: 8 * 4,
       isDisabled: false,
       isVisible: true,
       widgetName: "RichTextEditor",
@@ -46,24 +46,24 @@ const WidgetConfigResponse: WidgetConfigReducerState = {
       imageShape: "RECTANGLE",
       maxZoomLevel: 1,
       image: "",
-      rows: 3,
-      columns: 4,
+      rows: 3 * 4,
+      columns: 4 * 4,
       widgetName: "Image",
       version: 1,
     },
     INPUT_WIDGET: {
       inputType: "TEXT",
-      rows: 1,
+      rows: 1 * 4,
       label: "",
-      columns: 5,
+      columns: 5 * 4,
       widgetName: "Input",
       version: 1,
       resetOnSubmit: true,
     },
     SWITCH_WIDGET: {
       label: "Label",
-      rows: 1,
-      columns: 2,
+      rows: 1 * 4,
+      columns: 2 * 4,
       defaultSwitchState: true,
       widgetName: "Switch",
       alignWidget: "LEFT",
@@ -71,14 +71,14 @@ const WidgetConfigResponse: WidgetConfigReducerState = {
     },
     ICON_WIDGET: {
       widgetName: "Icon",
-      rows: 1,
-      columns: 1,
+      rows: 1 * 4,
+      columns: 1 * 4,
       version: 1,
     },
     CONTAINER_WIDGET: {
       backgroundColor: "#FFFFFF",
-      rows: 10,
-      columns: 8,
+      rows: 10 * 4,
+      columns: 8 * 4,
       widgetName: "Container",
       containerStyle: "card",
       children: [],
@@ -101,10 +101,10 @@ const WidgetConfigResponse: WidgetConfigReducerState = {
     DATE_PICKER_WIDGET: {
       isDisabled: false,
       datePickerType: "DATE_PICKER",
-      rows: 1,
+      rows: 1 * 4,
       label: "",
       dateFormat: "DD/MM/YYYY HH:mm",
-      columns: 5,
+      columns: 5 * 4,
       widgetName: "DatePicker",
       defaultDate: moment().format("DD/MM/YYYY HH:mm"),
       version: 1,
@@ -112,25 +112,25 @@ const WidgetConfigResponse: WidgetConfigReducerState = {
     DATE_PICKER_WIDGET2: {
       isDisabled: false,
       datePickerType: "DATE_PICKER",
-      rows: 1,
+      rows: 1 * 4,
       label: "",
       dateFormat: "DD/MM/YYYY HH:mm",
-      columns: 5,
+      columns: 5 * 4,
       widgetName: "DatePicker",
       defaultDate: moment().toISOString(),
       version: 2,
     },
     VIDEO_WIDGET: {
-      rows: 7,
-      columns: 7,
+      rows: 7 * 4,
+      columns: 7 * 4,
       widgetName: "Video",
       url: "https://www.youtube.com/watch?v=mzqK0QIZRLs",
       autoPlay: false,
       version: 1,
     },
     TABLE_WIDGET: {
-      rows: 7,
-      columns: 8,
+      rows: 7 * 4,
+      columns: 8 * 4,
       label: "Data",
       widgetName: "Table",
       searchKey: "",
@@ -165,8 +165,8 @@ const WidgetConfigResponse: WidgetConfigReducerState = {
       version: 1,
     },
     DROP_DOWN_WIDGET: {
-      rows: 1,
-      columns: 5,
+      rows: 1 * 4,
+      columns: 5 * 4,
       label: "",
       selectionType: "SINGLE_SELECT",
       options: [
@@ -179,8 +179,8 @@ const WidgetConfigResponse: WidgetConfigReducerState = {
       version: 1,
     },
     CHECKBOX_WIDGET: {
-      rows: 1,
-      columns: 3,
+      rows: 1 * 4,
+      columns: 3 * 4,
       label: "Label",
       defaultCheckedState: true,
       widgetName: "Checkbox",
@@ -188,8 +188,8 @@ const WidgetConfigResponse: WidgetConfigReducerState = {
       alignWidget: "LEFT",
     },
     RADIO_GROUP_WIDGET: {
-      rows: 2,
-      columns: 3,
+      rows: 2 * 4,
+      columns: 3 * 4,
       label: "",
       options: [
         { label: "Male", value: "M" },
@@ -202,18 +202,18 @@ const WidgetConfigResponse: WidgetConfigReducerState = {
     ALERT_WIDGET: {
       alertType: "NOTIFICATION",
       intent: "SUCCESS",
-      rows: 3,
-      columns: 3,
+      rows: 3 * 4,
+      columns: 3 * 4,
       header: "",
       message: "",
       widgetName: "Alert",
       version: 1,
     },
     FILE_PICKER_WIDGET: {
-      rows: 1,
+      rows: 1 * 4,
       files: [],
       label: "Select Files",
-      columns: 4,
+      columns: 4 * 4,
       maxNumFiles: 1,
       maxFileSize: 5,
       fileDataType: FileDataTypes.Base64,
@@ -222,8 +222,8 @@ const WidgetConfigResponse: WidgetConfigReducerState = {
       version: 1,
     },
     TABS_WIDGET: {
-      rows: 7,
-      columns: 8,
+      rows: 7 * 4,
+      columns: 8 * 4,
       shouldScrollContents: false,
       widgetName: "Tabs",
       tabs: [
@@ -259,8 +259,8 @@ const WidgetConfigResponse: WidgetConfigReducerState = {
       version: 1,
     },
     MODAL_WIDGET: {
-      rows: 6,
-      columns: 6,
+      rows: 6 * 4,
+      columns: 6 * 4,
       size: "MODAL_SMALL",
       canEscapeKeyClose: true,
       // detachFromLayout is set true for widgets that are not bound to the widgets within the layout.
@@ -289,7 +289,7 @@ const WidgetConfigResponse: WidgetConfigReducerState = {
                   {
                     type: "ICON_WIDGET",
                     position: { left: 14, top: 0 },
-                    size: { rows: 1, cols: 2 },
+                    size: { rows: 1 * 4, cols: 2 * 4 },
                     props: {
                       iconName: "cross",
                       iconSize: 24,
@@ -300,7 +300,7 @@ const WidgetConfigResponse: WidgetConfigReducerState = {
                   {
                     type: "TEXT_WIDGET",
                     position: { left: 0, top: 0 },
-                    size: { rows: 1, cols: 10 },
+                    size: { rows: 1 * 4, cols: 10 * 4 },
                     props: {
                       text: "Modal Title",
                       textStyle: "HEADING",
@@ -310,7 +310,7 @@ const WidgetConfigResponse: WidgetConfigReducerState = {
                   {
                     type: "BUTTON_WIDGET",
                     position: { left: 9, top: 4 },
-                    size: { rows: 1, cols: 3 },
+                    size: { rows: 1 * 4, cols: 3 * 4 },
                     props: {
                       text: "Cancel",
                       buttonStyle: "SECONDARY_BUTTON",
@@ -320,7 +320,7 @@ const WidgetConfigResponse: WidgetConfigReducerState = {
                   {
                     type: "BUTTON_WIDGET",
                     position: { left: 12, top: 4 },
-                    size: { rows: 1, cols: 4 },
+                    size: { rows: 1 * 4, cols: 4 * 4 },
                     props: {
                       text: "Confirm",
                       buttonStyle: "PRIMARY_BUTTON",
@@ -366,8 +366,8 @@ const WidgetConfigResponse: WidgetConfigReducerState = {
       version: 1,
     },
     CHART_WIDGET: {
-      rows: 8,
-      columns: 6,
+      rows: 8 * 4,
+      columns: 6 * 4,
       widgetName: "Chart",
       chartType: "LINE_CHART",
       chartName: "Sales on working days",
@@ -412,16 +412,16 @@ const WidgetConfigResponse: WidgetConfigReducerState = {
       yAxisName: "Total Order Revenue $",
     },
     FORM_BUTTON_WIDGET: {
-      rows: 1,
-      columns: 3,
+      rows: 1 * 4,
+      columns: 3 * 4,
       widgetName: "FormButton",
       text: "Submit",
       isDefaultClickDisabled: true,
       version: 1,
     },
     FORM_WIDGET: {
-      rows: 13,
-      columns: 7,
+      rows: 13 * 4,
+      columns: 7 * 4,
       widgetName: "Form",
       backgroundColor: "white",
       children: [],
@@ -440,7 +440,7 @@ const WidgetConfigResponse: WidgetConfigReducerState = {
                 view: [
                   {
                     type: "TEXT_WIDGET",
-                    size: { rows: 1, cols: 12 },
+                    size: { rows: 1 * 4, cols: 12 * 4 },
                     position: { top: 0, left: 0 },
                     props: {
                       text: "Form",
@@ -450,7 +450,7 @@ const WidgetConfigResponse: WidgetConfigReducerState = {
                   },
                   {
                     type: "FORM_BUTTON_WIDGET",
-                    size: { rows: 1, cols: 4 },
+                    size: { rows: 1 * 4, cols: 4 * 4 },
                     position: { top: 11, left: 12 },
                     props: {
                       text: "Submit",
@@ -462,7 +462,7 @@ const WidgetConfigResponse: WidgetConfigReducerState = {
                   },
                   {
                     type: "FORM_BUTTON_WIDGET",
-                    size: { rows: 1, cols: 4 },
+                    size: { rows: 1 * 4, cols: 4 * 4 },
                     position: { top: 11, left: 8 },
                     props: {
                       text: "Reset",
@@ -480,8 +480,8 @@ const WidgetConfigResponse: WidgetConfigReducerState = {
       },
     },
     MAP_WIDGET: {
-      rows: 12,
-      columns: 8,
+      rows: 12 * 4,
+      columns: 8 * 4,
       isDisabled: false,
       isVisible: true,
       widgetName: "Map",
@@ -495,8 +495,8 @@ const WidgetConfigResponse: WidgetConfigReducerState = {
     },
     SKELETON_WIDGET: {
       isLoading: true,
-      rows: 1,
-      columns: 1,
+      rows: 1 * 4,
+      columns: 1 * 4,
       widgetName: "Skeleton",
       version: 1,
     },

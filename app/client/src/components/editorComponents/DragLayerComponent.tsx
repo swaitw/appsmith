@@ -22,12 +22,6 @@ const WrappedDragLayer = styled.div<{
   top: ${CONTAINER_GRID_PADDING}px;
   height: calc(100% - ${CONTAINER_GRID_PADDING}px);
   width: calc(100% - ${CONTAINER_GRID_PADDING}px);
-
-  background-image: radial-gradient(
-    circle,
-    ${(props) => props.theme.colors.grid} 1px,
-    transparent 0
-  );
   background-size: ${(props) => props.columnWidth}px
     ${(props) => props.rowHeight}px;
   background-position: -${(props) => props.columnWidth / 2}px -${(props) =>

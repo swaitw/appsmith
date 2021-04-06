@@ -4,9 +4,12 @@ import { WIDGET_PADDING } from "constants/WidgetConstants";
 import { generateClassName } from "utils/generators";
 import styled from "styled-components";
 import { useClickOpenPropPane } from "utils/hooks/useClickOpenPropPane";
+import { getAppMode } from "selectors/applicationSelectors";
+import { useSelector } from "store";
+import { APP_MODE } from "reducers/entityReducers/appReducer";
 
 const PositionedWidget = styled.div`
-  &:hover {
+  &.allow-hover:hover {
     z-index: 1;
   }
 `;
@@ -22,7 +25,8 @@ export const PositionedContainer = (props: PositionedContainerProps) => {
   const y = props.style.yPosition + (props.style.yPositionUnit || "px");
   const padding = WIDGET_PADDING;
   const openPropertyPane = useClickOpenPropPane();
-
+  const appMode = useSelector(getAppMode);
+  const hoverClass = appMode === APP_MODE.EDIT ? "allow-hover" : "";
   return (
     <PositionedWidget
       onClickCapture={openPropertyPane}
@@ -42,7 +46,7 @@ export const PositionedContainer = (props: PositionedContainerProps) => {
         `t--widget-${props.widgetType
           .split("_")
           .join("")
-          .toLowerCase()}`
+          .toLowerCase()} ${hoverClass}`
       }
     >
       {props.children}
