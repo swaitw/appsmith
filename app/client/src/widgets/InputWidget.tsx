@@ -330,7 +330,7 @@ class InputWidget extends BaseWidget<InputWidgetProps, WidgetState> {
         placeholder={this.props.placeholderText}
         isLoading={this.props.isLoading}
         multiline={
-          this.props.bottomRow - this.props.topRow > 1 &&
+          (this.props.bottomRow - this.props.topRow) / 4 > 1 &&
           this.props.inputType === "TEXT"
         }
         stepSize={1}
