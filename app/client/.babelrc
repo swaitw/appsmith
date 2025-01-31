@@ -13,8 +13,8 @@
         "actions":"./src/actions/",
         "api": "./src/api/",
         "assets": "./src/assets/",
-        "sagas": "./src/sagas/",
+        "sagas": "./src/sagas/"
       }
-    }]
+    }, "babel-plugin-styled-components"]
   ]
 }
